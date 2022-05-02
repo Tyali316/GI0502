@@ -7,13 +7,22 @@
 // console.log(sharePizza(3));
  // prints "Each person gets 2.67 slices of pizza"  
  
+//How many slices we are making?
 
-function sharePizza(x) {
-    function cutPizzaSlices(){
-        return `Each person gets ${x} slices of pizza`;
-   }
-return sharePizza;
-} 
+function cutPizzaSlices(x) {
+return function (y){
+    return `Each person gets ${x/y} slices of pizza`;
+}
+}
+
+const sharePizza = cutPizzaSlices(8);
 
 console.log(sharePizza(2));
+console.log(sharePizza(3));
+
+    
+
+
+
+
 

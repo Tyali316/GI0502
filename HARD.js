@@ -23,12 +23,22 @@ const pii = {
  //data properties//
  firstName: "Tyali",
  lastName: "Warren",
- ssn: "123-45-6789",
+ ssn: "",
  //accessor property(getter)//
- get Name() {
+ getName() {
      return this.firstName;
- }
+ },
+getSSN() {
+  return this.ssn;
+},
+setSSN(x) {
+ this.ssn = x 
+}
 };
 
-console.log(pii.firstName);
+ pii.setSSN("123456789");
+ console.log(pii.ssn);
+// console.log(pii.getSSN());
+
+
 

@@ -16,11 +16,21 @@ console.log(me);
 
 
 
-
-
 // 2. Give the Person an 'exercise' method that console logs whatever you want, e.g. "Running is
 // fun! - said no one ever".
 
+function Person(name, job, age) {
+    this.name = name;
+    this.job = job;
+    this.age = age;
+}
+Person.prototype.exercise = function() {
+    return (${this.name} `actually thinks running is fun!`);
+};
+const p1 = new Person ("Tyali Warren", "Software Engineer", "25");
+let exercising = p1.exercise();
+
+console.log(exercising);
 
 
 
