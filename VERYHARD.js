@@ -19,26 +19,32 @@ console.log(me);
 // 2. Give the Person an 'exercise' method that console logs whatever you want, e.g. "Running is
 // fun! - said no one ever".
 
-function Person(name, job, age) {
-    this.name = name;
-    this.job = job;
-    this.age = age;
-}
-Person.prototype.exercise = function() {
-    return (${this.name} `actually thinks running is fun!`);
-};
-const p1 = new Person ("Tyali Warren", "Software Engineer", "25");
-let exercising = p1.exercise();
-
-console.log(exercising);
-
-
+// function Person(name, job, age) {
+//     this.name = name;
+//     this.job = job;
+//     this.age = age;
+//     this.exercise = function(){ // added exercise as a method//
+//         console.log(`Running is okay.`);
+//     }
+// }
+// const p1 = new Person ("Tyali Warren", "Software Engineer", "25");
+// p1.exercise(); 
 
 
 // 3. Give the Person a 'fetchJob' method that console logs the person's name and job, e.g. "Brad
 // is a back-end developer".
 
-
+function Person(name, job, age) {
+    this.name = name;
+    this.job = job;
+    this.age = age;
+    this.fetchJob = function(){
+        console.log(`This is ${this.name} and my job is ${this.job}`);
+    }
+  }
+  
+  const p2 = new Person ("Dwight Scrute", "Back-end Developer", "42");
+  p2.fetchJob();
 
 
 

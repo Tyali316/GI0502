@@ -19,26 +19,23 @@
 //name needs to be called in a public function not ssn
 //use get methods to access name 
 
-const pii = {
- //data properties//
- firstName: "Tyali",
- lastName: "Warren",
- ssn: "",
- //accessor property(getter)//
- getName() {
-     return this.firstName;
- },
-getSSN() {
-  return this.ssn;
-},
-setSSN(x) {
- this.ssn = x 
+class Pii {
+    constructor(name, ssn) {
+        this.name = name;
+        this.ssn = ssn;
+        
+    }   
+ 
 }
-};
 
- pii.setSSN("123456789");
- console.log(pii.ssn);
-// console.log(pii.getSSN());
+class SSN {
+    #privatefield;
+    constructor(){
+        return `${this.ssn}`;
+    }
+    }
 
 
+const employeeObject = new Pii("Tyali Warren", "123-45-6789");
 
+console.log(employeeObject.SSN);
